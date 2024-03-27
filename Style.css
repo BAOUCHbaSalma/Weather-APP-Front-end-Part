@@ -1,0 +1,15 @@
+.principal{
+    display: flex;
+   
+}
+.first{
+    background-color: blue;
+    width: 550px;
+    height: 97vh;
+}
+.second{
+    background-color: blueviolet;
+    width: 900px;
+    height: 97vh;
+    display: flex;
+}
