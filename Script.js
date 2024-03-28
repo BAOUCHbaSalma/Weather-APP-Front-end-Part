@@ -54,6 +54,25 @@ async function searchWeather() {
 }
 
 
+const windDiv = document.getElementById('windDiv');
+const humidityDiv = document.getElementById('humidityDiv');
+const temperatureDiv = document.getElementById('temperatureDiv');
+
+function displayWeather(data) {
+   
+    const windSpeed = data.wind.speed + 'km/h'; 
+    document.getElementById('windSpeed').innerText = windSpeed;
+
+    
+    
+    const humidityValue = data.main.humidity + '%'; 
+    document.getElementById('humidityValue').innerText = humidityValue;
+
+  
+   
+    const temperatureValue = data.main.temp + '°C'; 
+    document.getElementById('temperatureValue').innerText = temperatureValue;
+}
 
 
 
