@@ -45,6 +45,7 @@ async function searchWeather() {
             
             displayWeather(weatherData);
            
+           
         } else {
             alert('City not found.');
         }
@@ -54,9 +55,7 @@ async function searchWeather() {
 }
 
 
-const windDiv = document.getElementById('windDiv');
-const humidityDiv = document.getElementById('humidityDiv');
-const temperatureDiv = document.getElementById('temperatureDiv');
+
 
 function displayWeather(data) {
    
@@ -68,10 +67,8 @@ function displayWeather(data) {
     const humidityValue = data.main.humidity + '%'; 
     document.getElementById('humidityValue').innerText = humidityValue;
 
-  
-   
-    const temperatureValue = data.main.temp + '°C'; 
-    document.getElementById('temperatureValue').innerText = temperatureValue;
+    const temperatureCelsius = (data.main.temp - 273.15).toFixed(2)+ '°C'; 
+    document.getElementById('temperatureValue').innerText = temperatureCelsius ;
 }
 
 
