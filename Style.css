@@ -13,16 +13,17 @@
     border-radius: 100px;
     width: 550px;
     height: 95vh;
-    display: flex;
     padding-top: 40px;
-    justify-content: center;
-     align-items:self-start;
+   
 
    
 }
 
-.titleSecond{
-    color:red;
+.titleSecond h1{
+    color: white;
+    background: linear-gradient(50deg, rgb(70, 135, 72) 0%,  #120fd3ba 100%);
+ 
+    
 }
 
 
@@ -85,10 +86,17 @@
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 45px;
+}
+
 #search{
     padding: 10px 70px;
     border-radius: 5px;
-    border: 1px solid #120fd3;
+    border: 3px solid #120fd3;
    border-radius: 25px;
    font-size: 10px;
 
@@ -100,9 +108,67 @@ button {
     border-radius: 5px;
     background-color: #120fd3;
     color: white;
-    border: none;
+    border: 0.5px solid white;
     cursor: pointer;
     font-size: 13px;
     margin-left: 10px;
 
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info img {
+    width: 400px; 
+    
+  }
+.tempe{
+    margin-top: -25px;
+    font-size: 55px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+
+}
+ .description{
+    margin-top: -25px;
+    color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+ hr {
+    margin-top: 95px; 
+    width: 400px; 
+    border-style:solid; 
+    border-width: 2px; 
+    border-color: rgb(246, 246, 248)
+  }
+.City{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+
+}
+.City h1{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dateheurs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.dateheurs h2{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.dateheurs h3{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
