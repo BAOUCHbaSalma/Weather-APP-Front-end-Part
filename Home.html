@@ -11,21 +11,22 @@
 
         <div class="first">
           <div class="search">
-            <input type="text" id="search" placeholder="Search for your preffered city">
+            <input type="text" id="search" placeholder="Search city...">
             <button onclick="searchWeather()">Search</button>
           </div>
           <div class="info">
-            <img src="rain.png" alt="">
+            <div class="img-info">
+                <img src="rain.png" width="100%" alt="">
+            </div>
             <h1 class="tempe">31°c</h1>
             <h3 class="description">Mostly cloudy</h3>
           </div>
           <hr>
           <div class="dateheurs">
-            <h2>21-July-2024</h2>
-            <h3>Friday,12:44</h3>
+            <h2 class="date">21-July-2024</h2>
+            <h3 class="heurs">Friday,12:44</h3><br>
+            <h1 class="city">BENI MELLAL</h1>
           </div>
-          <div class="City"><h1>BENI MELLAL</h1></div>
-
         </div>
     
     
@@ -35,7 +36,6 @@
             <div class="titleSecond"><h1>
                 TODAY WEATHER
             </h1>
-
             </div>
 
 
@@ -45,22 +45,22 @@
 
             <div class="child">
 
-                <h2>Wind</h2>
-                <h1 id="windSpeed">60km/h</h1>
+                <h1>Wind</h1>
+                <h2 id="windSpeed">60km/h</h2>
 
             </div>
 
             <div class="child">
 
-                <h2>Humadity</h2>
-                <h1 id="humidityValue">69%</h1>
+                <h1>Humadity</h1>
+                <h2 id="humidityValue">69%</h2>
 
             </div>
 
             <div class="child">
 
-                <h2>Real Feel</h2>
-                <h1 id="temperatureValue">69%</h1>
+                <h1>Real Feel</h1>
+                <h2 id="temperatureValue">69%</h2>
 
             </div>
 
@@ -72,22 +72,22 @@
 
             <div class="child">
 
-                <h2>UV index</h2>
-                <h1>3</h1>
+                <h1>sea level</h1>
+                <h2>3</h2>
 
             </div>
 
             <div class="child">
 
-                <h2>Pressure</h2>
-                <h1>1000mb</h1>
+                <h1>Pressure</h1>
+                <h2>1000mb</h2>
 
             </div>
 
             <div class="child">
 
-                <h2>Change of rain</h2>
-                <h1>70%</h1>
+                <h1>Change of rain</h1>
+                <h2>70%</h2>
 
             </div>
 
@@ -97,28 +97,28 @@
             <div class="ligne3">
 
 
-                <div class="childBlack">
+                <div class="child">
 
-                    <h2>Tempurature History</h2>
-                    <h1>31%</h1>
-                    <h1>31%</h1>
-
-                </div>
-
-                <div class="childBlack">
-
-                    <h2>Sun</h2>
-                <h1>Rise</h1>
-                <h1>Set</h1>
-
+                    <h1>Tempurature</h1>
+                    <h2>31%</h2>
+                  
 
                 </div>
 
-                <div class="childBlack">
+                <div class="child">
 
-                    <h2>Moon</h2>
-                    <h1>Rise</h1>
-                    <h1>Set</h1>
+                    <h1>Sun</h1>
+                <h2 id="leversoleil">Rise :<span id="rise"></span></h2>
+                <h2 id="couchersoleil">Set :<span id="set"></span></h2>
+
+
+                </div>
+
+                <div class="child">
+
+                    <h1>Moon</h1>
+                    <h2>Rise</h2>
+                    <h2>Set</h2>
 
                 </div>
 
