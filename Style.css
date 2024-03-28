@@ -1,28 +1,19 @@
+
 .principal{
     display: flex;
    
 }
 .first{
-    background-color: blue;
+    background-color:white;
     width: 550px;
     height: 97vh;
 }
-/* .second{
-    background-color: blueviolet;
-    width: 900px;
-    height: 97vh;
-    display: flex;
-}
-.child{
-    background-color: aqua;
-}
-.childBlack{
-    background-color: aquamarine;
-} */
-
 
 .second {
-    background-color: blueviolet;
+
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
     width: 900px;
     height: 97vh;
     display: flex;
@@ -36,6 +27,8 @@
     width: 230px;
     height: 130px;
     border-radius: 15px;
+    color: white;
+    background-color: rgba(252, 247, 247, 0.429);
 
  
     
@@ -46,6 +39,9 @@
     width: 230px;
     height: 130px;
     border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.779);
+    color: white;
+
    
 }
 
@@ -70,4 +66,19 @@
     color: white;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
 }

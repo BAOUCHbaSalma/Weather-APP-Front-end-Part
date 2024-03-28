@@ -43,7 +43,7 @@ async function searchWeather() {
             const weatherResponse = await fetch(weatherUrl);
             const weatherData = await weatherResponse.json();
             
-            console.log(weatherData);
+            displayWeather(weatherData);
            
         } else {
             alert('City not found.');
@@ -53,11 +53,7 @@ async function searchWeather() {
     }
 }
 
-// function displayWeather(data) {
-//     const weatherResultsDiv = document.getElementById('weatherResults');
-//     // Modify this to display weather information as needed
-//     weatherResultsDiv.innerHTML = JSON.stringify(data);
-// }
+
 
 
 
