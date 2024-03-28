@@ -7,9 +7,66 @@
     width: 550px;
     height: 97vh;
 }
-.second{
+/* .second{
     background-color: blueviolet;
     width: 900px;
     height: 97vh;
     display: flex;
+}
+.child{
+    background-color: aqua;
+}
+.childBlack{
+    background-color: aquamarine;
+} */
+
+
+.second {
+    background-color: blueviolet;
+    width: 900px;
+    height: 97vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  
+}
+
+.child {
+    background-color: aqua;
+    width: 230px;
+    height: 130px;
+
+ 
+    
+}
+
+.childBlack {
+    background-color: aquamarine;
+    width: 230px;
+    height: 130px;
+  
+   
+}
+
+.ligne1{
+    display: flex;
+   justify-content: space-around;
+  
+   
+  
+}
+.ligne2{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.ligne3{
+    display: flex;
+    justify-content: space-around;
+ 
+}
+.titleSecond{
+    color: white;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
