@@ -8,24 +8,10 @@
 // // })
 
 
-// let lat = null;
-// let lon = null;
-// let ville= document.getElementById("search");
-
-// let villeC = ville.value;
-
-// async function get(){
-//     const response= await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${villeC}&limit=5&appid=${key}`)
-//     const data = await response.json()
-//     lat = data[0].lat;
-//     lon = data[0].lon;
-//     const url =await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`);
-//     const data2 = await url.json()
-//     console.log(data2)
 
 
-// }
-// get()
+
+
 
 const key = "244155d43b7fc901f0f438ae76092427";
 
@@ -64,6 +50,9 @@ async function searchWeather() {
 
 
 function displayWeather(data) {
+   const img = getIcon(data) ; 
+   console.log(img);
+    document.getElementById('imgs').src = img;
    
     const windSpeed = data.wind.speed + 'km/h'; 
     document.getElementById('windSpeed').innerText = windSpeed;
@@ -94,13 +83,13 @@ function displayWeather(data) {
 
 
     
-    const decalageUTC = 0; 
+  
     const Rise = data.sys.sunrise; 
-    const heureLeverSoleil =convertirHorodatageUnix(Rise, decalageUTC);
+    const heureLeverSoleil =convertirHorodatageUnix(Rise);
     document.getElementById('rise').innerText = heureLeverSoleil  ;
 
     const Set = data.sys.sunset ; 
-    const heureCoucherSoleil = convertirHorodatageUnix(Set, decalageUTC);
+    const heureCoucherSoleil = convertirHorodatageUnix(Set);
 
     document.getElementById('set').innerText = heureCoucherSoleil ;
 
@@ -120,7 +109,7 @@ function displayWeather(data) {
 
 
 
-function convertirHorodatageUnix(heureUnix, decalageUTC) {
+function convertirHorodatageUnix(heureUnix) {
     
     const milliseconds = heureUnix * 1000;
 
@@ -128,8 +117,7 @@ function convertirHorodatageUnix(heureUnix, decalageUTC) {
     const dateUTC = new Date(milliseconds);
 
    
-    const millisecondsDecalage = decalageUTC * 60 * 60 * 1000;
-    const dateLocale = new Date(dateUTC.getTime() + millisecondsDecalage);
+    const dateLocale = new Date(dateUTC.getTime());
 
  
     const heure = ('0' + dateLocale.getHours()).slice(-2);
@@ -139,6 +127,22 @@ function convertirHorodatageUnix(heureUnix, decalageUTC) {
     return heure + ':' + minutes + ':' + secondes;
 }
 
+function getIcon(data){
+
+    if(data.weather[0].main === "Clouds"){
+      return "/images/clouds.png";
+    }
+    else if(data.weather[0].main === "Rain"){
+      return "/images/raind.png";
+    }
+    else if(data.weather[0].main === "Snow"){
+      return "/images/snow.png";
+    }
+    else if(data.weather[0].main === "Clear"){
+      return "/images/c.png";
+    }
+
+}
 
 
 
