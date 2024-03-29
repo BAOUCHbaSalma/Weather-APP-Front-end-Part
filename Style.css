@@ -10,6 +10,8 @@ body{
     width: 100%;
     height: 100vh;
     background: url(téléchargement.jpg) no-repeat top right/cover ;
+
+    
 }
 .principal{
     width: 100%;
@@ -117,7 +119,6 @@ body{
 #search:focus{
         background: rgb(179, 162, 162);
 
-        
 }
 button {
     padding: 13px;

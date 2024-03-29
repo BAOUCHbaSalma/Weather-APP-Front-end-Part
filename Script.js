@@ -38,6 +38,7 @@ async function searchWeather() {
         
 
 
+
         if (data.length > 0) {
             const { lat, lon } = data[0];
            
@@ -45,7 +46,9 @@ async function searchWeather() {
             const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`; 
             const weatherResponse = await fetch(weatherUrl);
             const weatherData = await weatherResponse.json();
+
              console.log(weatherData)
+
             displayWeather(weatherData);
            
            
@@ -70,6 +73,7 @@ function displayWeather(data) {
 
     const temperatureCelsius = (data.main.temp - 273.15).toFixed(1)+ '°C'; 
     document.getElementById('temperatureValue').innerText = temperatureCelsius ;
+
     document.getElementById("tempe").innerHTML = temperatureCelsius;
 
     const feels_like = (data.main.feels_like - 273.15).toFixed(1)+ '°C'; 
@@ -87,6 +91,8 @@ function displayWeather(data) {
      const Temperature_min = (data.main.temp_min - 273.15).toFixed(1)+ '°C'; 
      document.getElementById('tem_min').innerText = Temperature_min;
 
+
+
     
     const decalageUTC = 0; 
     const Rise = data.sys.sunrise; 
@@ -95,6 +101,7 @@ function displayWeather(data) {
 
     const Set = data.sys.sunset ; 
     const heureCoucherSoleil = convertirHorodatageUnix(Set, decalageUTC);
+
     document.getElementById('set').innerText = heureCoucherSoleil ;
 
 
@@ -103,6 +110,7 @@ function displayWeather(data) {
 
     const Name = data.name ; 
     document.getElementById('city').innerText = Name;
+
 
 
 
