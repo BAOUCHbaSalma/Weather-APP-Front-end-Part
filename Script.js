@@ -9,10 +9,6 @@
 
 
 
-
-
-
-
 const key = "244155d43b7fc901f0f438ae76092427";
 
 async function searchWeather() {
@@ -21,9 +17,7 @@ async function searchWeather() {
     if (villeInput !== '') {
         const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${villeInput}&limit=5&appid=${key}`);
         const data = await response.json();
-        
-
-
+       
 
         if (data.length > 0) {
             const { lat, lon } = data[0];
@@ -144,6 +138,52 @@ function getIcon(data){
 
 }
 
+var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+var day;
+
+function updateClock() {
+  var now = new Date();
+
+  day = days[now.getDay()]; 
+
+  var hour = now.getHours();
+  var minute = now.getMinutes();
+  var second = now.getSeconds();
+
+  hour = hour < 10 ? "0" + hour : hour;
+  minute = minute < 10 ? "0" + minute : minute;
+  second = second < 10 ? "0" + second : second;
+
+  var time = hour + ":" + minute + ":" + second;
+  var fullTime = day + " " + time;
+
+  var clockElement = document.getElementById("clock");
+  clockElement.textContent = fullTime;
+}
+
+
+setInterval(updateClock, 1000);
+
+
+
+function updateDate() {
+  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+  var now = new Date();
+  var dayOfWeek = days[now.getDay()];
+  var dayOfMonth = now.getDate();
+  var month = months[now.getMonth()];
+  var year = now.getFullYear();
+
+  var formattedDate = dayOfMonth + "-" + month + "-" + year; 
+
+  var dateElement = document.querySelector('.date'); 
+  dateElement.textContent = formattedDate;
+}
+
+
+updateDate();
 
 
 
