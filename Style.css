@@ -181,3 +181,14 @@ button {
     align-items: center;
     padding: 15px 5px ;
 }
+.principal{
+    display: none;
+
+}
+
+.ser{
+    background-color: rgba(245, 245, 220, 0.596);
+    color: rgba(0, 0, 0, 0.726);
+
+}
+    
